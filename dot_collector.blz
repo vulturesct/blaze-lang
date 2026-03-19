@@ -1,0 +1,43 @@
+-- Dot Collector Game in Blaze!
+-- Use arrow keys to move the white box
+-- Collect the yellow dots to score points!
+
+include draw
+
+let px = 380
+let py = 280
+let ex = 200
+let ey = 150
+let score = 0
+let speed = 5
+
+game.loop {
+    draw.clear()
+
+    -- Move player
+    if key("left") {
+        set px = px - speed
+    }
+    if key("right") {
+        set px = px + speed
+    }
+    if key("up") {
+        set py = py - speed
+    }
+    if key("down") {
+        set py = py + speed
+    }
+
+    -- Check if player collected the dot
+    if near(px, py, ex, ey, 40) {
+        set score = score + 1
+        set ex = random(50, 750)
+        set ey = random(50, 550)
+    }
+
+    -- Draw everything
+    draw.circle(ex, ey, 15, "yellow")
+    draw.rect(px, py, 40, 40, "white")
+    draw.text(100, 20, "Score: " + score, "white")
+    draw.text(400, 20, "Arrow keys to move!", "gray")
+}

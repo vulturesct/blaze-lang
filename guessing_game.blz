@@ -1,0 +1,24 @@
+-- Guessing Game in Blaze!
+-- Try to guess the secret number between 1 and 10
+
+include input
+
+let secret = random(1, 10)
+let guess = 0
+let tries = 0
+
+print("Welcome to the Guessing Game!")
+print("I picked a number between 1 and 10...")
+
+loop while guess != secret {
+    let guess = num(input("Your guess:"))
+    set tries = tries + 1
+    if guess < secret {
+        print("Too low! Try again.")
+    }
+    if guess > secret {
+        print("Too high! Try again.")
+    }
+}
+
+print("YOU GOT IT in " + tries + " tries!")

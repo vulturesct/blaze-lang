@@ -1,0 +1,19 @@
+-- Hello World in Blaze!
+-- This is your first Blaze program
+
+let name = "World"
+let version = 1
+
+print("Hello " + name)
+print("Welcome to Blaze!")
+print("Version: " + version)
+
+if version > 0 {
+    print("Language is live!")
+}
+
+func greet(person) {
+    print("Nice to meet you " + person)
+}
+
+greet("Blazer")
