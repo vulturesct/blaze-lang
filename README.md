@@ -266,7 +266,7 @@ game.loop {
 
 Please dont download it and duplicate it edit it and finish yourself, this is my own project. If you would like to collaborate atleast message me on discord user: vulturewashere.
 
---
+---
 
 ## License
 
